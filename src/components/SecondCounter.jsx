@@ -4,15 +4,15 @@ export function SecondCounter({ seconds }) {
   const digits = seconds.toString().padStart(6, "0").split("");
 
   return (
-    <div className="row">
+    <div className="row justify-content-center p-5">
       {digits.map((digits, index) => {
         return (
           <div
             key={index}
-            className="col"
-            style={{ padding: 20, border: "solid 1px black" }}
+            className="bg-black col-auto py-2 mx-auto rounded-pill"
+            style={{ padding: 20, border: "solid 2px white" }}
           >
-            <h1>{digits}</h1>
+            <h1 className="text-white p-4">{digits}</h1>
           </div>
         );
       })}
